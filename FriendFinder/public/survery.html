@@ -18,11 +18,12 @@
 
         <h1>Survery</h1>
         <hr>
-        
-        <h2>Name?</h2>
+
+        <h2>Enter Name</h2>
         <input type="text" id="name" clas="form-control">
-        <h2>Upload Photo</h2>
+        <h2>Link Photo</h2>
         <input type="text" id="photo" class="form-control">
+        <hr>
         <hr>
 
         <h3>Question 1</h3>
@@ -37,7 +38,7 @@
         <hr>
 
         <h3>Question 2</h3>
-        <h4>You enjoy exploring your own taste in music.</h4>
+        <h4>You enjoy expanding your taste in music.</h4>
         <select class="chosen-select" id="q1">
             <option value="5">5 (Strongly Agree)</option>
             <option value="4">4 </option>
@@ -80,17 +81,69 @@
         </select>
         <hr>
         <hr>
-        
+
         <button type="submit" class="btn btn primary btn-lg" id="submit"></button>
         <hr>
         <hr>
 
         <footer class="container">
-            <a href="/api/friends"></a>
+            <a href="/api/friends"> API Friend List</a>
         </footer>
     </div>
+    <!--results-->
+    <div id="results" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
-        
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title"><strong>Best Match</strong></h2>
+                </div>
+                <div class="modal-body">
+                    <h2 id="myMatch"></h2>
+                    <img id="matchPhoto"
+                        src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--functionality-->
+    <script>
+        $("#submit").on("click", function (e) {
+            e.preventDefault();
+
+            const userInput = {
+                name: $("#name").val(),
+                photo: $("#photo").val(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val()
+                ]
+            };
+
+            $.post("/api/friends", userInput, function(data){
+                $("#myMatch").text(data.name);
+                $("#matchPhoto").atr("src", data.photo);
+
+            });
+
+        });
+         
+
+
+
+    </script>
+
 
 
 </body>
