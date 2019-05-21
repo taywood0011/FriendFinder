@@ -7,7 +7,7 @@ module.exports = function(app){
     });
 
     app.post("/api/friends", function(req, res){
-        const myMatch = {
+             myMatch = {
             name: "",
             photo: "",
             comparison: Number
@@ -18,12 +18,12 @@ module.exports = function(app){
 
         let comparison;
 
-        for (var i = 0; i < friends.length; i++) {
+        for (var i = 0; i < friends.length -1; i++) {
             const Friend = friends[i];
             comparison = 0;
       
            
-            for (var a = 0; a < Friend.scores.length; a++) {
+            for (var a = 0; a < 10; a++) {
               const friendScore = Friend.scores[a];
               const UserScores = userSurvery[a];
       
@@ -40,9 +40,9 @@ module.exports = function(app){
             }
           }
       
-         
+          
           friends.push(userInfo);
-      
+          
           
           res.json(myMatch);
         });

@@ -1,7 +1,7 @@
 const friends = [{
 
     name: "Mary Friendname",
-    photo: "https://www.pdclipart.org/albums/People__Faces/Asdza.png",
+    photo: "https://thispersondoesnotexist.com/image",
     scores: [
         "5",
         "2",
@@ -17,7 +17,7 @@ const friends = [{
 },
 {
     name: "Norman GreatFriend",
-    photo: "https://www.pdclipart.org/albums/People__Faces/cross_eyed.png",
+    photo: "https://thispersondoesnotexist.com/image",
     scores:[
         "2",
         "3",
@@ -34,7 +34,7 @@ const friends = [{
 },
 {
     name: "Alice Friendman",
-    photo: "https://www.pdclipart.org/albums/People__Faces/bad_hair_day.png",
+    photo: "https://thispersondoesnotexist.com/image",
     scores:[
         "5",
         "5",
@@ -51,7 +51,7 @@ const friends = [{
 },
 {
     name: "Friendo Calrissian",
-    photo:"https://www.pdclipart.org/albums/People__Faces/John.png",
+    photo:"https://thispersondoesnotexist.com/image",
     scores:[
         "1",
         "5",
