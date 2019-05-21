@@ -7,7 +7,12 @@ const friends = [{
         "2",
         "1",
         "3",
-        "4"
+        "4",
+        "3",
+        "1",
+        "5",
+        "3",
+        "1"
     ]
 },
 {
@@ -18,7 +23,47 @@ const friends = [{
         "3",
         "4",
         "1",
+        "5",
+        "5",
+        "5",
+        "3",
+        "1",
         "5"
+
+    ]
+},
+{
+    name: "Alice Friendman",
+    photo: "https://www.pdclipart.org/albums/People__Faces/bad_hair_day.png",
+    scores:[
+        "5",
+        "5",
+        "5",
+        "3",
+        "1",
+        "2",
+        "5",
+        "5",
+        "3",
+        "4"
+    ]
+    
+},
+{
+    name: "Friendo Calrissian",
+    photo:"https://www.pdclipart.org/albums/People__Faces/John.png",
+    scores:[
+        "1",
+        "5",
+        "4",
+        "3",
+        "2",
+        "1" ,
+        "5",
+        "4",
+        "3",
+        "5"
+
     ]
 }
 ]
