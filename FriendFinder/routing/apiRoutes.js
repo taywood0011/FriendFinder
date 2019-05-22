@@ -10,7 +10,7 @@ module.exports = function(app){
              myMatch = {
             name: "",
             photo: "",
-            comparison: Number
+            difference: Infinity
         };
 
         const userInfo = req.body;
@@ -32,11 +32,11 @@ module.exports = function(app){
             }
       
          
-            if (comparison <= myMatch.friendCompare) {
+            if (comparison <= myMatch.difference) {
              
               myMatch.name = Friend.name;
               myMatch.photo = Friend.photo;
-              myMatch.friendCompare = comparison;
+              myMatch.difference = comparison;
             }
           }
       
